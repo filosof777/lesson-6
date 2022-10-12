@@ -1,0 +1,25 @@
+ul {
+  display: flex;
+  gap: 20px;
+
+  li {
+    position: relative;
+    &::before {
+      content: "";
+      height: 2px;
+      width: 10%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-primary;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
